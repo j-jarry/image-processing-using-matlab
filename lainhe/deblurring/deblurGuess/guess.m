@@ -16,7 +16,7 @@ for i = 1:10
    psf = fspecial('motion',len(1),theta(i));
    eval(['lucy',num2str(i),' = deconvlucy(img,psf);']);
    eval(['X = lucy',num2str(i)],';');
-   filename = ['.\forDetect\lucy',num2str(i),'.jpg'];
+   filename = ['lucy',num2str(i),'.jpg'];
    imwrite(X,filename);
    eval(['c=fNRSS(lucy',num2str(i),');']);
    eval(['c',num2str(i),'=','c',';']);
